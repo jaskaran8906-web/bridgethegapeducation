@@ -168,7 +168,7 @@
     .scroll-arrow { animation:bounce 1.5s ease-in-out infinite; }
     @keyframes bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(8px)} }
     @keyframes ctaPulse { 0%,100%{box-shadow:0 0 0 0 rgba(232,117,106,0.45),0 4px 20px rgba(232,117,106,0.3)} 50%{box-shadow:0 0 0 10px rgba(232,117,106,0),0 8px 32px rgba(232,117,106,0.5)} }
-    @media(max-width:640px){.hero-stats{grid-template-columns:repeat(2,1fr)}.hero-stats .stat-item:last-child{grid-column:span 2}}
+    @media(max-width:640px){.hero-stats{grid-template-columns:repeat(2,1fr);gap:12px}.hero-stats .stat-item:last-child{grid-column:span 1}}
 
     /* ── MISSION ── */
     #mission { background:var(--bg-alt);padding:48px 24px; }
@@ -194,11 +194,11 @@
     .services-inner { max-width:1280px;margin:0 auto; }
     .services-header { margin-bottom:32px; }
     .services-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:14px; }
-    .svc-card { border-radius:20px;padding:22px;color:var(--white);height:200px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+    .svc-card { border-radius:14px;padding:12px 14px;color:var(--white);height:120px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,0,0,0.1); }
     .svc-card:hover { transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.18); }
-    .svc-card h3 { font-size:1rem;font-weight:700;margin:8px 0 4px; }
-    .svc-card p { font-size:0.8rem;opacity:0.88; }
-    .svc-link { display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.92);border-radius:8px;padding:6px 14px;font-size:0.75rem;font-weight:700;width:fit-content;text-decoration:none;transition:background .2s; }
+    .svc-card h3 { font-size:0.82rem;font-weight:700;margin:4px 0 2px; }
+    .svc-card p { font-size:0.72rem;opacity:0.88;display:none; }
+    .svc-link { display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.92);border-radius:6px;padding:4px 10px;font-size:0.7rem;font-weight:700;width:fit-content;text-decoration:none;transition:background .2s; }
     .svc-link:hover { background:var(--white); }
     /* softer, dreamier card gradients matching the reference palette */
     .bg-ai{background:linear-gradient(135deg,#f9a876,#f4826a)}
@@ -493,7 +493,7 @@
             <stop offset="100%" style="stop-color:#f9c76a"/>
           </linearGradient>
         </defs>
-        <rect width="400" height="400" rx="80" fill="#2a2540"/>
+        <rect width="400" height="400" rx="80" fill="none"/>
         <text x="200" y="260" text-anchor="middle" font-size="168" fill="url(#ng1)" letter-spacing="-4px" font-family="'Arial Black',Arial,sans-serif" font-weight="900">btg</text>
         <circle cx="72" cy="108" r="16" fill="#f9c76a" opacity="0.95"/>
         <text x="200" y="318" text-anchor="middle" font-size="42" fill="url(#ng1)" font-style="italic" letter-spacing="2px" font-family="'Arial Black',Arial,sans-serif" font-weight="900">edu</text>
@@ -606,6 +606,71 @@
 </section>
 
 
+<!-- WHAT I OFFER -->
+<section id="offer" style="padding:40px 24px;background:var(--bg)">
+  <div style="max-width:1280px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:24px">
+      <span class="section-eyebrow">What You Get</span>
+      <h2 class="section-h2">What I Offer</h2>
+      <p class="section-sub" style="margin:0 auto">No lock-ins, no hidden fees. Less than a coffee a day for the tools that could change your ATAR.</p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <div class="mission-card" style="border-left:3px solid #f9a876;padding:16px 18px">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#f9a876" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">Custom Study Plans</h3>
+        <p style="font-size:0.8rem">Personalised to your subjects, learning style, and ATAR goals.</p>
+      </div>
+      <div class="mission-card" style="border-left:3px solid #c8a8e9;padding:16px 18px">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#c8a8e9" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13"/><path d="M12 6.253C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">Study Systems for All Subjects</h3>
+        <p style="font-size:0.8rem">Proven frameworks for Maths, English, Sciences, HSIE and more.</p>
+      </div>
+      <div class="mission-card" style="border-left:3px solid #a8c8f0;padding:16px 18px">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#a8c8f0" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">Career Advice &amp; Planning</h3>
+        <p style="font-size:0.8rem">Pathways into Medicine, Law, Engineering — from someone already there.</p>
+      </div>
+      <div class="mission-card" style="border-left:3px solid #b8e8a0;padding:16px 18px">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#b8e8a0" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">Network of High Achievers</h3>
+        <p style="font-size:0.8rem">Connect with med students, industry experts, and high-achievers.</p>
+      </div>
+      <div class="mission-card" style="border-left:3px solid #f9c76a;padding:16px 18px">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#f9c76a" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">Weekly Check-ins</h3>
+        <p style="font-size:0.8rem">Progress updates with you and your parents — full accountability.</p>
+      </div>
+      <div class="mission-card" style="border-left:3px solid #e8756a;padding:16px 18px;position:relative;overflow:visible">
+        <div class="mission-icon" style="margin-bottom:6px"><svg width="18" height="18" fill="none" stroke="#e8756a" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg></div>
+        <h3 style="font-size:0.9rem;margin-bottom:4px">3 Free Video Calls / Month</h3>
+        <p style="font-size:0.8rem">Up to 3 sessions per month included in your membership.</p>
+        <div style="position:absolute;top:12px;right:12px;background:var(--primary);color:white;font-size:0.6rem;font-weight:700;padding:2px 7px;border-radius:999px">INCLUDED</div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:24px;background:linear-gradient(135deg,rgba(232,117,106,0.08),rgba(200,168,233,0.08));border:1px solid rgba(232,117,106,0.2);border-radius:20px;padding:24px;text-align:center">
+      <h3 style="font-size:1.2rem;font-weight:800;color:var(--text);margin-bottom:6px">Start for free — book your first call today</h3>
+      <p style="color:var(--text-muted);font-size:0.88rem;max-width:480px;margin:0 auto 18px">No lock-in contracts. No upfront payment. Just a conversation about your goals.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="#contact" class="btn-primary" style="font-size:0.88rem;padding:10px 22px">Book Free Consultation →</a>
+        <a href="https://www.skool.com/bridgethegap-education-9728" target="_blank" rel="noopener" class="btn-outline" style="font-size:0.88rem;padding:10px 22px">Join Free Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HSC COUNTDOWN -->
+<section id="countdown" style="background:var(--navy);padding:32px 24px;text-align:center">
+  <div style="max-width:700px;margin:0 auto">
+    <p style="color:rgba(200,168,233,0.7);font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px">HSC Written Exams Begin</p>
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap" id="cdTimer">
+      <div class="cd-unit"><span class="cd-num" id="cdDays">—</span><span class="cd-lbl">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdHours">—</span><span class="cd-lbl">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdMins">—</span><span class="cd-lbl">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdSecs">—</span><span class="cd-lbl">Seconds</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <div class="services-inner">
@@ -649,72 +714,6 @@
         </div>
         <span class="svc-link" style="color:#e8756a;font-weight:800;font-size:0.8rem">Book Now →</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- HSC COUNTDOWN -->
-<section id="countdown" style="background:var(--navy);padding:32px 24px;text-align:center">
-  <div style="max-width:700px;margin:0 auto">
-    <p style="color:rgba(200,168,233,0.7);font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px">HSC Written Exams Begin</p>
-    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap" id="cdTimer">
-      <div class="cd-unit"><span class="cd-num" id="cdDays">—</span><span class="cd-lbl">Days</span></div>
-      <div class="cd-unit"><span class="cd-num" id="cdHours">—</span><span class="cd-lbl">Hours</span></div>
-      <div class="cd-unit"><span class="cd-num" id="cdMins">—</span><span class="cd-lbl">Minutes</span></div>
-      <div class="cd-unit"><span class="cd-num" id="cdSecs">—</span><span class="cd-lbl">Seconds</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT I OFFER -->
-<section id="offer" style="padding:56px 24px;background:var(--bg)">
-  <div style="max-width:1280px;margin:0 auto">
-    <div class="reveal" style="text-align:center;margin-bottom:32px">
-      <span class="section-eyebrow">What You Get</span>
-      <h2 class="section-h2">What I Offer</h2>
-      <p class="section-sub" style="margin:0 auto">No lock-ins, no hidden fees. Less than a coffee a day for the tools that could change your ATAR.</p>
-    </div>
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <div class="mission-card" style="border-left:3px solid #f9a876">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#f9a876" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
-        <h3>Custom Study Plans</h3>
-        <p>Personalised to your subjects, learning style, and ATAR goals. No generic templates.</p>
-      </div>
-      <div class="mission-card" style="border-left:3px solid #c8a8e9">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#c8a8e9" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13"/><path d="M12 6.253C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13"/></svg></div>
-        <h3>Study Systems for Every Major Subject</h3>
-        <p>Proven frameworks for Maths, English, Sciences, HSIE and more — tested by hundreds of students.</p>
-      </div>
-      <div class="mission-card" style="border-left:3px solid #a8c8f0">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#a8c8f0" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>Career Advice &amp; Planning</h3>
-        <p>Guidance on pathways into Medicine, Law, Engineering and beyond — from someone already there.</p>
-      </div>
-      <div class="mission-card" style="border-left:3px solid #b8e8a0">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#b8e8a0" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h3>Network of High Achievers</h3>
-        <p>Connect with industry experts, med students, and high-achievers in your field through our platform.</p>
-      </div>
-      <div class="mission-card" style="border-left:3px solid #f9c76a">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#f9c76a" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-        <h3>Weekly Check-ins (Student + Parents)</h3>
-        <p>Phone call progress updates with both you and your parents — full transparency, full accountability.</p>
-      </div>
-      <div class="mission-card" style="border-left:3px solid #e8756a;position:relative;overflow:visible">
-        <div class="mission-icon"><svg width="20" height="20" fill="none" stroke="#e8756a" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg></div>
-        <h3>3 Free Video Calls / Month</h3>
-        <p>Book up to 3 video sessions per month at no extra cost — included in your $20/week membership.</p>
-        <div style="position:absolute;top:16px;right:16px;background:var(--primary);color:white;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:999px">INCLUDED</div>
-      </div>
-    </div>
-    <div class="reveal" style="margin-top:48px;background:linear-gradient(135deg,rgba(232,117,106,0.08),rgba(200,168,233,0.08));border:1px solid rgba(232,117,106,0.2);border-radius:24px;padding:40px;text-align:center">
-      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:6px">Ready to study smarter?</p>
-      <h3 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--text);margin-bottom:8px">Start for free — book your first call today</h3>
-      <p style="color:var(--text-muted);font-size:0.95rem;max-width:480px;margin:0 auto 28px">No lock-in contracts. No upfront payment. Just a conversation about your goals.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href="#contact" class="btn-primary">Book Free Consultation →</a>
-        <a href="https://www.skool.com/bridgethegap-education-9728" target="_blank" rel="noopener" class="btn-outline">Join Free Community</a>
-      </div>
     </div>
   </div>
 </section>
@@ -1085,7 +1084,7 @@
     { q:"Is there a lock-in contract?", a:"No lock-in contracts and no upfront payment. We start with a free consultation call to make sure it's the right fit, and you only continue if you're getting value. The first call is completely free." },
     { q:"How much does it cost?", a:"1-on-1 mentoring is significantly more affordable than traditional tutoring at $80+/hr. Book a free consultation and I'll walk you through the options that suit your needs and budget." },
     { q:"What is the free Skool community?", a:"It's a free online community with 2,000+ active members where you can access study resources, ask questions, and connect with other motivated students. It's a great first step before committing to 1-on-1 mentoring." },
-    { q:"What's your background?", a:"I'm a 4th year UNSW Medicine student who achieved a 96.7+ ATAR. I've been tutoring since 2020 and have worked with students from over 100 schools across Sydney. I hold a Working With Children check and have helped students gain entry to Medicine, Law, and Engineering." },
+    { q:"What's your background?", a:"I'm a 4th year UNSW Medicine student. I've been tutoring since 2020 and have worked with students from over 100 schools across Sydney. I hold a Working With Children check and have helped students gain entry to Medicine, Law, and Engineering." },
     { q:"How do I get started?", a:"Fill out the contact form on this page and I'll get back to you within 24 hours. Alternatively, DM me on Instagram @growwithjassi_ or text me directly on 0439 392 432. The first consultation is free." }
   ];
   const faqList = document.getElementById('faqList');
